@@ -1,0 +1,11 @@
+<h1>📦 Raktárkészlet</h1>
+
+<ul>
+  {% for p in products %}
+    <li>
+      <a href="/product/{{ p[0] }}">{{ p[1] }}</a>
+      | SKU: {{ p[2] }}
+      | Készlet: {{ p[3] }}
+    </li>
+  {% endfor %}
+</ul>
