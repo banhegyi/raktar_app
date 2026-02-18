@@ -1,5 +1,5 @@
-# Python 3.11 slim image
-FROM python:3.11-slim
+# Python 3.12 slim image
+FROM python:3.12-slim
 
 # Munka könyvtár
 WORKDIR /app
@@ -15,4 +15,4 @@ COPY . .
 ENV PORT=10000
 
 # Start gunicorn
-CMD ["gunicorn", "app:app", "--bind", "0.0.0.0:10000"]
+CMD ["gunicorn", "--chdir", "/app", "wsgi:app", "--bind", "0.0.0.0:10000"]
