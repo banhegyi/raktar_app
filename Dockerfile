@@ -1,18 +1,18 @@
-# Python 3.12 slim image
-FROM python:3.12-slim
+# 1. Alap Python image
+FROM python:3.11-slim
 
-# Munka könyvtár
+# 2. Munkakönyvtár
 WORKDIR /app
 
-# Függőségek telepítése
+# 3. Függőségek
 COPY requirements.txt .
 RUN pip install --no-cache-dir -r requirements.txt
 
-# App fájlok másolása
+# 4. A teljes app másolása
 COPY . .
 
-# Port beállítás
-ENV PORT=10000
+# 5. Port
+EXPOSE 10000
 
-# Start gunicorn
-CMD ["gunicorn", "--chdir", "/app", "wsgi:app", "--bind", "0.0.0.0:10000"]
+# 6. Gunicorn parancs
+CMD ["gunicorn", "--chdir", "/app", "wsgi:app", "--bind", "0.0.0.0:10000", "--workers", "1"]
