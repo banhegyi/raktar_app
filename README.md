@@ -1,5 +1,12 @@
 # Raktar App
 
+# Raktar App
+
+![Python](https://img.shields.io/badge/Python-3.11-blue)
+![Flask](https://img.shields.io/badge/Flask-Web_App-black)
+![Docker](https://img.shields.io/badge/Docker-Containerized-blue)
+![PostgreSQL](https://img.shields.io/badge/PostgreSQL-Database-blue)
+
 A simple warehouse inventory web application built with Python and Flask.
 
 The application allows users to view products stored in a warehouse and inspect detailed product information
@@ -40,23 +47,25 @@ Other tools:
 ## Project Structure
 The project follows a layered structure to separate responsibilities.
 
+```
 raktar_app
 │
-├── routes/ → Flask route handlers
-├── services/ → business logic layer
-├── db/ → database connection logic
-├── models.py → database models
-├── templates/ → HTML templates
+├── routes/        # Flask route handlers
+├── services/      # Business logic layer
+├── db/            # Database connection logic
+├── models.py      # Database models
+├── templates/     # HTML templates
 │
-├── app.py → Flask application factory
-├── run.py → application entry point
-├── wsgi.py → production server entry
-├── init_db.py → database initialization
+├── app.py         # Flask application factory
+├── run.py         # Application entry point
+├── wsgi.py        # Production server entry
+├── init_db.py     # Database initialization
 │
 ├── Dockerfile
 ├── Procfile
 ├── requirements.txt
 └── README.md
+```
 
 ## Running the Application
 
@@ -99,4 +108,5 @@ This project was created to practice:
 - relational database usage
 - modular application architecture
 - containerized deployment with Docker
+
 
