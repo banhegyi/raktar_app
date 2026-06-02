@@ -103,6 +103,7 @@ http://localhost:5000
 Build and run:
 
 docker build -t raktar-app .
+
 docker run -p 5000:5000 raktar-app
 
 
