@@ -1,27 +1,39 @@
-# Raktar App
+# Raktar App – Warehouse Management System
 
-# Raktar App
+# Raktar App – Warehouse Management System
 
 ![Python](https://img.shields.io/badge/Python-3.11-blue)
 ![Flask](https://img.shields.io/badge/Flask-Web_App-black)
 ![Docker](https://img.shields.io/badge/Docker-Containerized-blue)
 ![PostgreSQL](https://img.shields.io/badge/PostgreSQL-Database-blue)
 
-A simple warehouse inventory web application built with Python and Flask.
+A containerized warehouse inventory web application built with Python (Flask), PostgreSQL, and Docker.
 
-The application allows users to view products stored in a warehouse and inspect detailed product information
-such as SKU, quantity and location. The project demonstrates backend development concepts such as database integration,
-environment configuration and containerized deployment.
+The system provides a simple backend-driven interface for managing warehouse products, including product listing and detailed inventory information such as SKU, quantity, and storage location.
+
+The project demonstrates backend architecture design, relational database integration, and containerized deployment workflows.
+
+---
+## Key Features
+- Product list retrieval from database
+- Detailed product information view (SKU, quantity, location)
+- PostgreSQL database integration
+- Environment-based configuration management
+- Fully containerized setup with Docker & Docker Compose
 
 ---
 
-## Features
+## Architecture Overview
 
-- Display warehouse product list
-- View detailed product information
-- PostgreSQL database integration
-- Environment-based configuration
-- Docker container support
+The application follows a layered backend architecture:
+
+- Routes layer – HTTP request handling (Flask routes)
+- Service layer – business logic separation
+- Database layer – PostgreSQL connection and queries
+- Model layer – data structure definitions
+- Template layer – basic UI rendering (Jinja2)
+
+This structure ensures separation of concerns and maintainability.
 
 ---
 
@@ -40,7 +52,7 @@ Infrastructure:
 - Docker Compose
 
 Other tools:
-- dotenv (environment variables)
+- python-dotenv (environment variables)
 
 ---
 
@@ -67,32 +79,28 @@ raktar_app
 └── README.md
 ```
 
-## Running the Application
+## How to run locally
 
 Install dependencies:
-
 
 pip install -r requirements.txt
 
 
 Start the application:
 
-
 python run.py
 
 
 Open in browser:
-
 
 http://localhost:5000
 
 
 ---
 
-## Running with Docker
+## Run with Docker
 
 Build and run:
-
 
 docker build -t raktar-app .
 docker run -p 5000:5000 raktar-app
@@ -100,13 +108,25 @@ docker run -p 5000:5000 raktar-app
 
 ---
 
-## Project Purpose
+## Project Goals
 
-This project was created to practice:
+This project was developed to practice:
 
-- Python backend development
-- relational database usage
-- modular application architecture
-- containerized deployment with Docker
+- Flask backend development
+- REST-style application structure
+- PostgreSQL relational database usage
+- Layered software architecture
+- Containerized deployment with Docker
+- Environment-based configuration management
+
+---
+
+## What this project demonstrates
+
+- Backend system design using Python
+- Database-driven application development
+- Separation of business logic and routing
+- Basic DevOps workflow (Docker)
+- Production-ready application structure (WSGI support)
 
 
